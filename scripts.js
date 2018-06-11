@@ -1,1 +1,24 @@
-document.getElementById('pTag').innerHTML = 'Hello';
+function submitName(){
+	let charName = document.getElementById('charName');
+}
+
+
+
+
+
+
+
+
+
+
+function runDiceGame(){
+
+
+
+
+
+
+
+
+}
+runDiceGame();
