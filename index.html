@@ -10,59 +10,59 @@
 	<h1 class="underline">Dice Game</h1>
 	<h2>Dylan Schmidt</h2><br>
 	<h4 class="underline">Instructions:</h4>
-	<h5>You get to roll each dice once to pick: Initial Health, Health Regeneration, Attack Weapon, Attack Strenght, Defence Type, and Defence Strength.</h5>
-	<h5>Pick each attribute in order, as listed, for your character's stats.</h5>
+	<h5>Select your possible points towards each attribute respectivly.</h5>
+	<h5>Can you beat the computer?</h5>
 	<fieldset class="left">
 		<legend>Choose Your Attribute Order</legend>
-			Four Sided Die:<select id="fourSided">
-							  <option value="initialHealth">Initial Health</option>
-							  <option value="healthRegeneration">Health Regeneration</option>
-							  <option value="attackWeapon">Attack Weapon</option>
-							  <option value="AttackStrength">Attack Strength</option>
-							  <option value="defenceType">Defence Type</option>
-							  <option value="defenceStrength">Defence Strength</option>
+			Initial Health:<select id="initialHealth">
+							  <option value="four">Four</option>
+							  <option value="six">Six</option>
+							  <option value="eight">Eight</option>
+							  <option value="ten">Ten</option>
+							  <option value="twelve">Twelve</option>
+							  <option value="twenty">Twenty</option>
 							</select>
-			Roll Six Side Die:<select id="sixSided">
-							  <option value="initialHealth">Initial Health</option>
-							  <option value="healthRegeneration">Health Regeneration</option>
-							  <option value="attackWeapon">Attack Weapon</option>
-							  <option value="AttackStrength">Attack Strength</option>
-							  <option value="defenceType">Defence Type</option>
-							  <option value="defenceStrength">Defence Strength</option>
+			Health Regeneration:<select id="healthRegeneration">
+							  <option value="four">Four</option>
+							  <option value="six">Six</option>
+							  <option value="eight">Eight</option>
+							  <option value="ten">Ten</option>
+							  <option value="twelve">Twelve</option>
+							  <option value="twenty">Twenty</option>
 							</select>
-			Roll Eight Side Die:<select id="eightSided">
-							  <option value="initialHealth">Initial Health</option>
-							  <option value="healthRegeneration">Health Regeneration</option>
-							  <option value="attackWeapon">Attack Weapon</option>
-							  <option value="AttackStrength">Attack Strength</option>
-							  <option value="defenceType">Defence Type</option>
-							  <option value="defenceStrength">Defence Strength</option>
+			Attack Weapon:<select id="attackWeapon">
+							  <option value="four">Four</option>
+							  <option value="six">Six</option>
+							  <option value="eight">Eight</option>
+							  <option value="ten">Ten</option>
+							  <option value="twelve">Twelve</option>
+							  <option value="twenty">Twenty</option>
 							</select>
-			Roll Ten Side Die:<select id="tenSided">
-							  <option value="initialHealth">Initial Health</option>
-							  <option value="healthRegeneration">Health Regeneration</option>
-							  <option value="attackWeapon">Attack Weapon</option>
-							  <option value="AttackStrength">Attack Strength</option>
-							  <option value="defenceType">Defence Type</option>
-							  <option value="defenceStrength">Defence Strength</option>
+			Attack Strength:<select id="attackStrength">
+							  <option value="four">Four</option>
+							  <option value="six">Six</option>
+							  <option value="eight">Eight</option>
+							  <option value="ten">Ten</option>
+							  <option value="twelve">Twelve</option>
+							  <option value="twenty">Twenty</option>
 							</select>
-			Roll Twelve Side Die:<select id="twelveSided">
-							  <option value="initialHealth">Initial Health</option>
-							  <option value="healthRegeneration">Health Regeneration</option>
-							  <option value="attackWeapon">Attack Weapon</option>
-							  <option value="AttackStrength">Attack Strength</option>
-							  <option value="defenceType">Defence Type</option>
-							  <option value="defenceStrength">Defence Strength</option>
+			Defence Type:<select id="defenceType">
+							  <option value="four">Four</option>
+							  <option value="six">Six</option>
+							  <option value="eight">Eight</option>
+							  <option value="ten">Ten</option>
+							  <option value="twelve">Twelve</option>
+							  <option value="twenty">Twenty</option>
 							</select>
-			Roll Twenty Side Die:<select>
-							  <option value="initialHealth">Initial Health</option>
-							  <option value="healthRegeneration">Health Regeneration</option>
-							  <option value="attackWeapon">Attack Weapon</option>
-							  <option value="AttackStrength">Attack Strength</option>
-							  <option value="defenceType">Defence Type</option>
-							  <option value="defenceStrength">Defence Strength</option>
+			Defence Strength:<select id="defenceStrength">
+							  <option value="four">Four</option>
+							  <option value="six">Six</option>
+							  <option value="eight">Eight</option>
+							  <option value="ten">Ten</option>
+							  <option value="twelve">Twelve</option>
+							  <option value="twenty">Twenty</option>
 							</select>
-			<input type="submit" name="submit" id="submit" onclick="setAttributes()">
+			<input type="submit" name="submit" value="Set" id="submit" onclick="setAttributes()">
 	</fieldset>
 	<p id="pTag"></p>
 
