@@ -9,3 +9,7 @@ body {
 .underline {
 	text-decoration: underline;
 }
+
+.rightJustify {
+	text-align: left;
+}

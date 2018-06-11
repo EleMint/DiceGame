@@ -1,26 +1,27 @@
-//player roll 
 
 
+function setAttributes(){
 
-
-function promptUserForString(message){
-	return prompt(message);
 }
+
+
+
 
 function rollDie(nSides){
 	return Math.floor((Math.random() * nSides) + 1);
 }
 
-function removeHealth(hearts){
 
-
-}
 
 
 
 function runDiceGame(){
-	let health = 20;
-	//let charName = promptUserForString('Character Name:');
+	let initialHealth;
+	let addedHealth;
+	let attackWeapon;
+	let attackStrength;
+	let defenceType;
+	let defenceStrength;
 
 
 

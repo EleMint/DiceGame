@@ -10,14 +10,61 @@
 	<h1 class="underline">Dice Game</h1>
 	<h2>Dylan Schmidt</h2><br>
 	<h4 class="underline">Instructions:</h4>
-	<h5></h5>
+	<h5>You get to roll each dice once to pick: Initial Health, Health Regeneration, Attack Weapon, Attack Strenght, Defence Type, and Defence Strength.</h5>
+	<h5>Pick each attribute in order, as listed, for your character's stats.</h5>
+	<fieldset class="left">
+		<legend>Choose Your Attribute Order</legend>
+			Four Sided Die:<select id="fourSided">
+							  <option value="initialHealth">Initial Health</option>
+							  <option value="healthRegeneration">Health Regeneration</option>
+							  <option value="attackWeapon">Attack Weapon</option>
+							  <option value="AttackStrength">Attack Strength</option>
+							  <option value="defenceType">Defence Type</option>
+							  <option value="defenceStrength">Defence Strength</option>
+							</select>
+			Roll Six Side Die:<select id="sixSided">
+							  <option value="initialHealth">Initial Health</option>
+							  <option value="healthRegeneration">Health Regeneration</option>
+							  <option value="attackWeapon">Attack Weapon</option>
+							  <option value="AttackStrength">Attack Strength</option>
+							  <option value="defenceType">Defence Type</option>
+							  <option value="defenceStrength">Defence Strength</option>
+							</select>
+			Roll Eight Side Die:<select id="eightSided">
+							  <option value="initialHealth">Initial Health</option>
+							  <option value="healthRegeneration">Health Regeneration</option>
+							  <option value="attackWeapon">Attack Weapon</option>
+							  <option value="AttackStrength">Attack Strength</option>
+							  <option value="defenceType">Defence Type</option>
+							  <option value="defenceStrength">Defence Strength</option>
+							</select>
+			Roll Ten Side Die:<select id="tenSided">
+							  <option value="initialHealth">Initial Health</option>
+							  <option value="healthRegeneration">Health Regeneration</option>
+							  <option value="attackWeapon">Attack Weapon</option>
+							  <option value="AttackStrength">Attack Strength</option>
+							  <option value="defenceType">Defence Type</option>
+							  <option value="defenceStrength">Defence Strength</option>
+							</select>
+			Roll Twelve Side Die:<select id="twelveSided">
+							  <option value="initialHealth">Initial Health</option>
+							  <option value="healthRegeneration">Health Regeneration</option>
+							  <option value="attackWeapon">Attack Weapon</option>
+							  <option value="AttackStrength">Attack Strength</option>
+							  <option value="defenceType">Defence Type</option>
+							  <option value="defenceStrength">Defence Strength</option>
+							</select>
+			Roll Twenty Side Die:<select>
+							  <option value="initialHealth">Initial Health</option>
+							  <option value="healthRegeneration">Health Regeneration</option>
+							  <option value="attackWeapon">Attack Weapon</option>
+							  <option value="AttackStrength">Attack Strength</option>
+							  <option value="defenceType">Defence Type</option>
+							  <option value="defenceStrength">Defence Strength</option>
+							</select>
+			<input type="submit" name="submit" id="submit" onclick="setAttributes()">
+	</fieldset>
 	<p id="pTag"></p>
-	<input type="submit" id="fourSidedDie" value="Roll Four Sided Die" onclick="rollDie(4)">
-	<input type="submit" id="sixSideDie" value="Roll Six Side Die" onclick="rollDie(6)">
-	<input type="submit" id="eightSideDie" value="Roll Eight Side Die" onclick="rollDie(8)">
-	<input type="submit" id="tenSideDie" value="Roll Ten Side Die" onclick>
-	<input type="submit" id="twelveSideDie" value="Roll Twelve Side Die">
-	<input type="submit" id="twentySideDie" value="Roll Twenty Side Die">
 
 
 <script type="text/javascript" src="scripts.js"></script>
