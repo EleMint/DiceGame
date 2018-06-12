@@ -1,25 +1,26 @@
 
 
 function setAttributes(){
-	initialHealth = parseFloat(document.getElementById('initialHealth').value);
-	addedHealth = parseFloat(document.getElementById('addedHealth').value);
-	attackWeapon = parseFloat(document.getElementById('attackWeapon').value);
-	attackStrength = parseFloat(document.getElementById('attackStrength').value);
-	defenceType = parseFloat(document.getElementById('defenceType').value);
-	defenceStrength = parseFloat(document.getElementById('defenceStrength').value);
-	initialHealthMultiplied = rollDie(initialHealth);
-	addedHealthMultiplied = rollDie(addedHealth);
-	attackWeaponMultiplied = rollDie(attackWeapon);
-	attackStrengthMultiplied = rollDie(attackStrength);
-	defenceTypeMultiplied = rollDie(defenceType);
-	defenceStrengthMultiplied = rollDie(defenceStrength);
-	calculateScores();
+	let initialHealth = parseFloat(document.getElementById('initialHealth').value);
+	let addedHealth = parseFloat(document.getElementById('addedHealth').value);
+	let attackWeapon = parseFloat(document.getElementById('attackWeapon').value);
+	let attackStrength = parseFloat(document.getElementById('attackStrength').value);
+	let defenceType = parseFloat(document.getElementById('defenceType').value);
+	let defenceStrength = parseFloat(document.getElementById('defenceStrength').value);
+	let initialHealthMultiplied = rollDie(initialHealth);
+	let addedHealthMultiplied = rollDie(addedHealth);
+	let attackWeaponMultiplied = rollDie(attackWeapon);
+	let attackStrengthMultiplied = rollDie(attackStrength);
+	let defenceTypeMultiplied = rollDie(defenceType);
+	let defenceStrengthMultiplied = rollDie(defenceStrength);
+    console.log('hello');
+    calculateScores(initialHealthMultiplied, addedHealthMultiplied, attackWeaponMultiplied, attackStrengthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied);
 }
 
-function calculateScores(){
-	calculateComputerScore();
-	calculatePlayerScore();
-	let winner = decideWhoWins();
+function calculateScores(initialHealthMultiplied, addedHealthMultiplied, attackWeaponMultiplied, attackStrengthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied){
+	let computerScore = calculateComputerScore();
+	let playerScore = calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, computerAttackWeaponMultiplied, computerAttackStrengthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied);
+	let winner = decideWhoWins(playerScore, computerScore);
 	displayWinner(winner);
 
 }
@@ -45,11 +46,12 @@ function calculateComputerScore(){
 //let randNum = Math.floor(Math.random()) * 6;
 
 
-	computerScore = (computerInitialHealthMultiplied + computerAddedHealthMultiplied + (computerDefenceStrengthMultiplied + computerDefenceTypeMultiplied)) - (computerAttackStrengthMultiplied + computerAttackWeaponMultiplied)
+	let computerScore = (computerInitialHealthMultiplied + computerAddedHealthMultiplied + (computerDefenceStrengthMultiplied + computerDefenceTypeMultiplied)) - (computerAttackStrengthMultiplied + computerAttackWeaponMultiplied)
+	return computerScore;
 }
 
 
-function calculatePlayerScore(){
+function calculatePlayerScore(initialHealthMultiplied, addedHealthMultipliedn, defenceStrengthMultiplied, defenceTypeMultiplied,computerAttackStrengthMultiplied, computerAttackWeaponMultiplied){
 	playerScore = (initialHealthMultiplied + addedHealthMultiplied + (defenceStrengthMultiplied + defenceTypeMultiplied)) - (computerAttackStrengthMultiplied + computerAttackWeaponMultiplied);
 }
 
@@ -76,7 +78,7 @@ function rollDie(nSides){
 }
 
 function runDiceGame(){
-	let initialHealth;
+	/*let initialHealth;
 	let addedHealth;
 	let attackWeapon;
 	let attackStrength;
@@ -101,7 +103,7 @@ function runDiceGame(){
 	let computerAttackStrengthMultiplied;
 	let computerDefenceTypeMultiplied;
 	let computerDefenceStrengthMultiplied;
-	let computerScore;
+	let computerScore;*/
 
 
 
