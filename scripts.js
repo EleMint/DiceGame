@@ -1,19 +1,9 @@
 "use strict";
 //Only Global Variables!
-let computerAttackWeaponMultiplied =rollDie(20);
-let computerAttackStrengthMultiplied =rollDie(6);
-/*setAttributes() is ran when the set button is clicked on index.html
-	--gets all attributes from index.html
-	--calculate allocated attribute points
-	computerScore = calculateComputerScore()
-	return computerScore
-	return computerAttack
-	call calculatePlayerScore()
-	call decidesWhoWins()
-	call displayWinner()*/
+let computerAttackWeaponMultiplied = rollDie(20);
+let computerAttackStrengthMultiplied = rollDie(6);
+
 function setAttributes(){
-	console.log(computerAttackWeaponMultiplied);
-	console.log(computerAttackStrengthMultiplied);
 	let initialHealth = parseFloat(document.getElementById('initialHealth').value);
 	let addedHealth = parseFloat(document.getElementById('addedHealth').value);
 	let attackWeapon = parseFloat(document.getElementById('attackWeapon').value);
@@ -27,13 +17,13 @@ function setAttributes(){
 	let defenceTypeMultiplied = rollDie(defenceType);
 	let defenceStrengthMultiplied = rollDie(defenceStrength);
 	calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied,computerAttackStrengthMultiplied, computerAttackWeaponMultiplied, attackStrengthMultiplied, attackWeaponMultiplied);
-
 }
 
-function calculateScores(playerScore, computerScore){
-    let winner = decideWhoWins(playerScore, computerScore);
-    displayWinner(winner);
-}
+//function calculateScores(playerScore, computerScore){
+//    let winner = decideWhoWins(playerScore, computerScore);
+//    displayWinner(winner);
+//}
+
 function calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied, attackStrengthMultiplied, attackWeaponMultiplied){
 	let computerInitialHealth = 12;
     let computerAddedHealth = 4;
@@ -43,19 +33,17 @@ function calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, 
     let computerAddedHealthMultiplied = rollDie(computerAddedHealth);
     let computerDefenceTypeMultiplied = rollDie(computerDefenceType);
     let computerDefenceStrengthMultiplied = rollDie(computerDefenceStrength);
-    let computerScore = 17;
-    let playerScore = calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, computerAttackWeaponMultiplied, computerAttackStrengthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied);
-    let winner = decideWhoWins(playerScore, computerScore);
-    displayWinner(winner);
-//let randNum = Math.floor(Math.random()) * 6;
-    calculateScores(initialHealthMultiplied, addedHealthMultiplied, attackWeaponMultiplied, attackStrengthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied, computerScore);
-    return (computerInitialHealthMultiplied + computerAddedHealthMultiplied + (computerDefenceStrengthMultiplied + computerDefenceTypeMultiplied)) - (attackStrengthMultiplied + attackWeaponMultiplied)
+    let computerScore = (computerInitialHealthMultiplied + computerAddedHealthMultiplied + (computerDefenceStrengthMultiplied + computerDefenceTypeMultiplied)) - (attackStrengthMultiplied + attackWeaponMultiplied);
+    let playerScore = calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied);
+    console.log(playerScore, computerScore);
+    decideWhoWins(playerScore, computerScore);
+    //displayWinner(winner);
+    //calculateScores(initialHealthMultiplied, addedHealthMultiplied, attackWeaponMultiplied, attackStrengthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied, computerScore);
+    //return (computerInitialHealthMultiplied + computerAddedHealthMultiplied + (computerDefenceStrengthMultiplied + computerDefenceTypeMultiplied)) - (attackStrengthMultiplied + attackWeaponMultiplied)
 }
 
-
-function calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied,computerAttackStrengthMultiplied, computerAttackWeaponMultiplied){
+function calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied){
 	return (initialHealthMultiplied + addedHealthMultiplied + (defenceStrengthMultiplied + defenceTypeMultiplied)) - (computerAttackStrengthMultiplied + computerAttackWeaponMultiplied);
-
 }
 
 
@@ -67,6 +55,8 @@ function calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, de
 function decideWhoWins(playerScore, computerScore){
 	if(playerScore > computerScore){
 		displayWinner('Player');
+	} else if(playerScore === computerScore) {
+		displayWinner('Tie');
 	} else {
 		displayWinner('Computer');
 	}
@@ -81,36 +71,6 @@ function rollDie(nSides){
 }
 
 function runDiceGame(){
-	/*let initialHealth;
-	let addedHealth;
-	let attackWeapon;
-	let attackStrength;
-	let defenceType;
-	let defenceStrength;
-	let initialHealthMultiplied;
-	let addedHealthMultiplied;
-	let attackWeaponMultiplied;
-	let attackStrengthMultiplied;
-	let defenceTypeMultiplied;
-	let defenceStrengthMultiplied;
-	let playerScore;
-	let computerInitialHealth;
-	let computerAddedHealth;
-	let computerAttackWeapon;
-	let computerAttackStrength;
-	let computerDefenceType;
-	let computerDefenceStrength;
-	let computerInitialHealthMultiplied;
-	let computerAddedHealthMultiplied;
-	let computerAttackWeaponMultiplied;
-	let computerAttackStrengthMultiplied;
-	let computerDefenceTypeMultiplied;
-	let computerDefenceStrengthMultiplied;
-	let computerScore;*/
-
-
-
-
 
 }
 runDiceGame();
