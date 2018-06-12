@@ -1,4 +1,7 @@
 "use strict";
+//Only Global Variables!
+let computerAttackWeaponMultiplied =rollDie(20);
+let computerAttackStrengthMultiplied =rollDie(6);
 /*setAttributes() is ran when the set button is clicked on index.html
 	--gets all attributes from index.html
 	--calculate allocated attribute points
@@ -9,6 +12,8 @@
 	call decidesWhoWins()
 	call displayWinner()*/
 function setAttributes(){
+	console.log(computerAttackWeaponMultiplied);
+	console.log(computerAttackStrengthMultiplied)
 	let initialHealth = parseFloat(document.getElementById('initialHealth').value);
 	let addedHealth = parseFloat(document.getElementById('addedHealth').value);
 	let attackWeapon = parseFloat(document.getElementById('attackWeapon').value);
@@ -29,22 +34,17 @@ function calculateScores(initialHealthMultiplied, addedHealthMultiplied, attackW
     let winner = decideWhoWins(playerScore, computerScore);
     displayWinner(winner);
 }
-function calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied,computerAttackStrengthMultiplied, computerAttackWeaponMultiplied, attackStrengthMultiplied, attackWeaponMultiplied){
+function calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied, attackStrengthMultiplied, attackWeaponMultiplied){
+	let computerInitialHealth = 12;
+    let computerAddedHealth = 4;
+    let computerDefenceType = 10;
+    let computerDefenceStrength = 8;
+    let computerInitialHealthMultiplied = rollDie(computerInitialHealth);
+    let computerAddedHealthMultiplied = rollDie(computerAddedHealth);
+    let computerDefenceTypeMultiplied = rollDie(computerDefenceType);
+    let computerDefenceStrengthMultiplied = rollDie(computerDefenceStrength);
 
-	computerInitialHealth;
-    computerAddedHealth;
-    computerAttackWeapon;
-    computerAttackStrength;
-    computerDefenceType;
-    computerDefenceStrength;
-    computerInitialHealthMultiplied;
-    computerAddedHealthMultiplied;
-    computerAttackWeaponMultiplied;
-    computerAttackStrengthMultiplied;
-    computerDefenceTypeMultiplied;
-    computerDefenceStrengthMultiplied;
-
-    let computerScore = ;
+    let computerScore;
     let playerScore = calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, computerAttackWeaponMultiplied, computerAttackStrengthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied);
     let winner = decideWhoWins(playerScore, computerScore);
     displayWinner(winner);
