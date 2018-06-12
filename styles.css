@@ -13,3 +13,11 @@ body {
 .rightJustify {
 	text-align: left;
 }
+
+.reference {
+	text-align: left;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	font-size: 10px;
+}
