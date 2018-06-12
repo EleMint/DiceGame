@@ -90,7 +90,6 @@ function checkIfSame(checkInitialValues) {
     let fifth = document.getElementById('defenceType').value;
     let sixth = document.getElementById('defenceStrength').value;
 
-    console.log(first, second, third, fourth, fifth, sixth);
 
     let areSame = (first !== second && first !== third && first !== fourth && first !== fifth && first !== sixth && second !== third && second !== fourth && second !== fifth && second !== sixth && third !== fourth && third !== fifth && third !== sixth && fourth !== fifth && fourth !== sixth && fifth !== sixth);
     console.log(!areSame);
