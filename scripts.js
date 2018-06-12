@@ -92,7 +92,7 @@ function checkIfSame(checkInitialValues) {
 
 
     let areSame = (first !== second && first !== third && first !== fourth && first !== fifth && first !== sixth && second !== third && second !== fourth && second !== fifth && second !== sixth && third !== fourth && third !== fifth && third !== sixth && fourth !== fifth && fourth !== sixth && fifth !== sixth);
-    console.log(!areSame);
+    
     if(!areSame) {
         document.getElementById('setButton').disabled = true;
     } else {
