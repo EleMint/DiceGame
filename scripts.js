@@ -1,34 +1,35 @@
 "use strict";
+function buttonCall(){
+    //let buttonAttr = document.getElementById('setButton');
+    //let text = buttonAttr.getAttribute('display: inline');
+    //console.log(text);
+    document.getElementById('setButton').disabled = true;
+}
 
 function setAttributes(){
-	let counter = 0;
-	if(counter < 1) {
-        let initialHealth = parseFloat(document.getElementById('initialHealth').value);
-        let addedHealth = parseFloat(document.getElementById('addedHealth').value);
-        let attackWeapon = parseFloat(document.getElementById('attackWeapon').value);
-        let attackStrength = parseFloat(document.getElementById('attackStrength').value);
-        let defenceType = parseFloat(document.getElementById('defenceType').value);
-        let defenceStrength = parseFloat(document.getElementById('defenceStrength').value);
-        let initialHealthMultiplied = rollDie(initialHealth);
-        let addedHealthMultiplied = rollDie(addedHealth);
-        let attackWeaponMultiplied = rollDie(attackWeapon);
-        let attackStrengthMultiplied = rollDie(attackStrength);
-        let defenceTypeMultiplied = rollDie(defenceType);
-        let defenceStrengthMultiplied = rollDie(defenceStrength);
-        let computerAttackWeaponMultiplied = getComputerAttackStrengthValue(20);
-        let computerAttackStrengthMultiplied = getComputerAttackWeaponValue(6);
-        calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied, computerAttackStrengthMultiplied, computerAttackWeaponMultiplied, attackStrengthMultiplied, attackWeaponMultiplied);
-    } else {
-		document.getElementById('pTag').innerHTML = "Please Reset The Game."
-	}
-	counter = 1;
+    document.getElementById('setButton').disabled = true;
+    let initialHealth = parseFloat(document.getElementById('initialHealth').value);
+    let addedHealth = parseFloat(document.getElementById('addedHealth').value);
+    let attackWeapon = parseFloat(document.getElementById('attackWeapon').value);
+    let attackStrength = parseFloat(document.getElementById('attackStrength').value);
+    let defenceType = parseFloat(document.getElementById('defenceType').value);
+    let defenceStrength = parseFloat(document.getElementById('defenceStrength').value);
+    let initialHealthMultiplied = rollDie(initialHealth);
+    let addedHealthMultiplied = rollDie(addedHealth);
+    let attackWeaponMultiplied = rollDie(attackWeapon);
+    let attackStrengthMultiplied = rollDie(attackStrength);
+    let defenceTypeMultiplied = rollDie(defenceType);
+    let defenceStrengthMultiplied = rollDie(defenceStrength);
+    let computerAttackWeaponMultiplied = getComputerAttackStrengthValue(20);
+    let computerAttackStrengthMultiplied = getComputerAttackWeaponValue(6);
+    calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied, computerAttackStrengthMultiplied, computerAttackWeaponMultiplied, attackStrengthMultiplied, attackWeaponMultiplied);
 }
 
 function getComputerAttackStrengthValue(sides){
 	let output;
 	let counter = 0;
 	if(counter < 1){
-        counter = 1;
+        counter++;
         output = rollDie(sides);
         return output;
 	} else {
