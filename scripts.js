@@ -1,10 +1,4 @@
 "use strict";
-function buttonCall(){
-    //let buttonAttr = document.getElementById('setButton');
-    //let text = buttonAttr.getAttribute('display: inline');
-    //console.log(text);
-    document.getElementById('setButton').disabled = true;
-}
 
 function setAttributes(){
     document.getElementById('setButton').disabled = true;
@@ -88,7 +82,31 @@ function rollDie(nSides){
 	return Math.floor((Math.random() * nSides) + 1);
 }
 
+function checkIfSame(checkInitialValues) {
+    let first = document.getElementById('initialHealth').value;
+    let second = document.getElementById('addedHealth').value;
+    let third = document.getElementById('attackWeapon').value;
+    let fourth = document.getElementById('attackStrength').value;
+    let fifth = document.getElementById('defenceType').value;
+    let sixth = document.getElementById('defenceStrength').value;
+
+    console.log(first, second, third, fourth, fifth, sixth);
+
+    let areSame = (first !== second && first !== third && first !== fourth && first !== fifth && first !== sixth && second !== third && second !== fourth && second !== fifth && second !== sixth && third !== fourth && third !== fifth && third !== sixth && fourth !== fifth && fourth !== sixth && fifth !== sixth);
+    console.log(!areSame);
+    if(!areSame) {
+        document.getElementById('setButton').disabled = true;
+    } else {
+        document.getElementById('setButton').disabled = false;
+        clearInterval(checkInitialValues);
+    }
+
+
+}
+
 function runDiceGame(){
+    let count = 0;
+    let checkInitialValues = setInterval(function(){checkIfSame(checkInitialValues); count++; if(count === 120){window.location.reload();}}, 1000);
 
 }
 runDiceGame();
