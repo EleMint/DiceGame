@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Dice Game</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="icon" href="dice.png" type="image/png">
+	<meta name="description" content="Description of the page content"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body class="center">
 	<br>
 	<br>
-	<h1 class="underline">Dice Game</h1>
-	<h2>Dylan Schmidt</h2><br>
-	<h4 class="underline">Instructions:</h4>
-	<h4>Select your possible points towards each attribute respectively. Select only one number per attribute.</h4>
-	<h4>Can you beat the computer? (Computer is randomized each play)</h4>
+	<div class="container">
+		<br>
+		<div class="row">
+			<div class="col-md">
+				<h1 class="underline">Dice Game</h1>
+			</div>
+			<div class="col-md">
+				<h2 class="underline">Dylan Schmidt</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md">
+				<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md">
+				<h4 class="underline">Instructions:</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md">
+				<h5>Select your possible points towards each attribute respectively. Select only one number per attribute.</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md">
+				<h5>Can you beat the computer? (The computer is randomized each play)</h5>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
 	<fieldset class="left">
-		<legend>Choose Your Attribute Order</legend>
-			Initial Health:<select id="initialHealth">
+		<legend>Choose Your Attribute Order:</legend>
+			Initial Health: <select id="initialHealth">
 							  <option value="4">Four</option>
 							  <option value="6">Six</option>
 							  <option value="8">Eight</option>
@@ -23,7 +55,7 @@
 							  <option value="12">Twelve</option>
 							  <option value="20">Twenty</option>
 							</select>
-			Additional Health:<select id="addedHealth">
+			Additional Health: <select id="addedHealth">
 							  <option value="4">Four</option>
 							  <option value="6">Six</option>
 							  <option value="8">Eight</option>
@@ -31,7 +63,7 @@
 							  <option value="12">Twelve</option>
 							  <option value="20">Twenty</option>
 							</select>
-			Attack Weapon:<select id="attackWeapon">
+			Attack Weapon: <select id="attackWeapon">
 							 <option value="4">Four</option>
 							  <option value="6">Six</option>
 							  <option value="8">Eight</option>
@@ -39,7 +71,7 @@
 							  <option value="12">Twelve</option>
 							  <option value="20">Twenty</option>
 							</select>
-			Attack Strength:<select id="attackStrength">
+			Attack Strength: <select id="attackStrength">
 							  <option value="4">Four</option>
 							  <option value="6">Six</option>
 							  <option value="8">Eight</option>
@@ -47,7 +79,7 @@
 							  <option value="12">Twelve</option>
 							  <option value="20">Twenty</option>
 							</select>
-			Defence Type:<select id="defenceType">
+			Defence Type: <select id="defenceType">
 							  <option value="4">Four</option>
 							  <option value="6">Six</option>
 							  <option value="8">Eight</option>
@@ -55,7 +87,7 @@
 							  <option value="12">Twelve</option>
 							  <option value="20">Twenty</option>
 							</select>
-			Defence Strength:<select id="defenceStrength">
+			Defence Strength: <select id="defenceStrength">
 							  <option value="4">Four</option>
 							  <option value="6">Six</option>
 							  <option value="8">Eight</option>
