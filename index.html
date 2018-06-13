@@ -56,64 +56,93 @@
 				<h5>Can you beat the computer? (The computer is randomized each play)</h5>
 			</div>
 		</div>
-	</div>
-	<br>
-	<br>
-	<fieldset class="left">
-		<legend class="underline">Choose Your Attribute Order:</legend>
-			Initial Health: <select id="initialHealth">
-							  <option value="4">Four</option>
-							  <option value="6">Six</option>
-							  <option value="8">Eight</option>
-							  <option value="10">Ten</option>
-							  <option value="12">Twelve</option>
-							  <option value="20">Twenty</option>
-							</select>
-			Additional Health: <select id="addedHealth">
-							  <option value="4">Four</option>
-							  <option value="6">Six</option>
-							  <option value="8">Eight</option>
-							  <option value="10">Ten</option>
-							  <option value="12">Twelve</option>
-							  <option value="20">Twenty</option>
-							</select>
-			Attack Weapon: <select id="attackWeapon">
-							 <option value="4">Four</option>
-							  <option value="6">Six</option>
-							  <option value="8">Eight</option>
-							  <option value="10">Ten</option>
-							  <option value="12">Twelve</option>
-							  <option value="20">Twenty</option>
-							</select>
-			Attack Strength: <select id="attackStrength">
-							  <option value="4">Four</option>
-							  <option value="6">Six</option>
-							  <option value="8">Eight</option>
-							  <option value="10">Ten</option>
-							  <option value="12">Twelve</option>
-							  <option value="20">Twenty</option>
-							</select>
-			Defence Type: <select id="defenceType">
-							  <option value="4">Four</option>
-							  <option value="6">Six</option>
-							  <option value="8">Eight</option>
-							  <option value="10">Ten</option>
-							  <option value="12">Twelve</option>
-							  <option value="20">Twenty</option>
-							</select>
-			Defence Strength: <select id="defenceStrength">
-							  <option value="4">Four</option>
-							  <option value="6">Six</option>
-							  <option value="8">Eight</option>
-							  <option value="10">Ten</option>
-							  <option value="12">Twelve</option>
-							  <option value="20">Twenty</option>
-							</select>
-			<input type="submit" disabled value="Set" id="setButton" onclick="setAttributes()">
-	</fieldset><br><br>
-	<p id="pTag"><br></p><br><br>
-	<input type="submit" value="Reset" onclick="window.location.reload()">
-
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md center">
+                <h4 class="underline">Choose Your Attribute Order:</h4>
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-md">
+                Initial Health: <select id="initialHealth">
+                                  <option value="4">Four</option>
+                                  <option value="6">Six</option>
+                                  <option value="8">Eight</option>
+                                  <option value="10">Ten</option>
+                                  <option value="12">Twelve</option>
+                                  <option value="20">Twenty</option>
+                                </select>
+            </div>
+            <div class="col-md">
+                Additional Health: <select id="addedHealth">
+                                  <option value="4">Four</option>
+                                  <option value="6">Six</option>
+                                  <option value="8">Eight</option>
+                                  <option value="10">Ten</option>
+                                  <option value="12">Twelve</option>
+                                  <option value="20">Twenty</option>
+                                </select>
+            </div>
+            <div class="col-md">
+                Attack Weapon: <select id="attackWeapon">
+                                 <option value="4">Four</option>
+                                  <option value="6">Six</option>
+                                  <option value="8">Eight</option>
+                                  <option value="10">Ten</option>
+                                  <option value="12">Twelve</option>
+                                  <option value="20">Twenty</option>
+                                </select>
+            </div>
+            <div class="col-md">
+                Attack Strength: <select id="attackStrength">
+                                  <option value="4">Four</option>
+                                  <option value="6">Six</option>
+                                  <option value="8">Eight</option>
+                                  <option value="10">Ten</option>
+                                  <option value="12">Twelve</option>
+                                  <option value="20">Twenty</option>
+                                </select>
+            </div>
+            <div class="col-md">
+                Defence Type: <select id="defenceType">
+                                  <option value="4">Four</option>
+                                  <option value="6">Six</option>
+                                  <option value="8">Eight</option>
+                                  <option value="10">Ten</option>
+                                  <option value="12">Twelve</option>
+                                  <option value="20">Twenty</option>
+                                </select>
+            </div>
+            <div class="col-md">
+                Defence Strength: <select id="defenceStrength">
+                                  <option value="4">Four</option>
+                                  <option value="6">Six</option>
+                                  <option value="8">Eight</option>
+                                  <option value="10">Ten</option>
+                                  <option value="12">Twelve</option>
+                                  <option value="20">Twenty</option>
+                                </select>
+            </div>
+            <div class="col-md">
+			    <input type="submit" disabled value="Set" id="setButton" onclick="setAttributes()">
+            </div>
+            <br>
+        </div>
+        <div class="row center">
+            <div class="col-md center">
+            <br>
+                <p id="pTag"><br></p>
+            <br>
+            </div>
+        </div>
+        <div class="row center">
+            <br>
+            <div class="col-md">
+	            <input type="submit" value="Reset" onclick="window.location.reload()">
+            </div>
+        </div>
+    </div>
 
 <script type="text/javascript" src="scripts.js"></script>
 </body>
