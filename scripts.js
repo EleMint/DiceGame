@@ -44,7 +44,7 @@ function getComputerAttackWeaponValue(sides){
 }
 
 function calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, defenceStrengthMultiplied, defenceTypeMultiplied, attackStrengthMultiplied, attackWeaponMultiplied){
-	let computerInitialHealth = 12;
+	let computerInitialHealth = 20;
     let computerAddedHealth = 4;
     let computerDefenceType = 10;
     let computerDefenceStrength = 8;
@@ -52,16 +52,15 @@ function calculateComputerScore(initialHealthMultiplied, addedHealthMultiplied, 
     let computerAddedHealthMultiplied = rollDie(computerAddedHealth);
     let computerDefenceTypeMultiplied = rollDie(computerDefenceType);
     let computerDefenceStrengthMultiplied = rollDie(computerDefenceStrength);
-    let computerAttackWeaponMultiplied = getComputerAttackWeaponValue(20);
+    let computerAttackWeaponMultiplied = getComputerAttackWeaponValue(12);
     let computerAttackStrengthMultiplied = getComputerAttackStrengthValue(6);
-    let computerScore = (computerInitialHealthMultiplied + computerAddedHealthMultiplied + (computerDefenceStrengthMultiplied + computerDefenceTypeMultiplied)) - (attackStrengthMultiplied + attackWeaponMultiplied);
-    let playerScore = calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied,computerAttackWeaponMultiplied, computerAttackStrengthMultiplied);
-    console.log(playerScore, computerScore);
+    let computerScore = Math.abs((computerInitialHealthMultiplied + computerAddedHealthMultiplied) * (computerDefenceStrengthMultiplied + computerDefenceTypeMultiplied) - (attackStrengthMultiplied + attackWeaponMultiplied));
+    let playerScore = Math.abs(calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied,computerAttackWeaponMultiplied, computerAttackStrengthMultiplied));
     decideWhoWins(playerScore, computerScore);
 }
 
 function calculatePlayerScore(initialHealthMultiplied, addedHealthMultiplied, defenceTypeMultiplied, defenceStrengthMultiplied, computerAttackWeaponMultiplied, computerAttackStrengthMultiplied){
-	return (initialHealthMultiplied + addedHealthMultiplied + (defenceStrengthMultiplied + defenceTypeMultiplied)) - (computerAttackStrengthMultiplied + computerAttackWeaponMultiplied);
+	return ((initialHealthMultiplied + addedHealthMultiplied) * (defenceStrengthMultiplied + defenceTypeMultiplied)) - (computerAttackStrengthMultiplied + computerAttackWeaponMultiplied);
 }
 
 function decideWhoWins(playerScore, computerScore){
@@ -92,7 +91,7 @@ function checkIfSame(checkInitialValues) {
 
 
     let areSame = (first !== second && first !== third && first !== fourth && first !== fifth && first !== sixth && second !== third && second !== fourth && second !== fifth && second !== sixth && third !== fourth && third !== fifth && third !== sixth && fourth !== fifth && fourth !== sixth && fifth !== sixth);
-    
+
     if(!areSame) {
         document.getElementById('setButton').disabled = true;
     } else {
